@@ -1,0 +1,30 @@
+body, html {
+    overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	text-rendering: optimizeLegibility;
+	font-size: 1em;
+}
+
+.container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+// text-lead styles
+
+.tag-line {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: .6;
+    color: white;
+    line-height: 1.2;
+}
+
+.sub-line {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+}

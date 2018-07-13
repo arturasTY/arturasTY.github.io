@@ -1,0 +1,28 @@
+.cta {
+  display: block;
+  max-width: 150px;
+  padding: .5em;
+  line-height: 1.25;
+  text-align: center;
+  color: #fff;
+  -ms-touch-action: manipulation;
+  -moz-touch-action: manipulation;
+  -webkit-touch-action: manipulation;
+  touch-action: manipulation;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 3px;
+  background: $green;
+  border: 2px solid transparent;
+  transition: all .3s ease-in-out;
+  &:hover {
+    color: white;
+    background-color: transparent;
+    border-color: $green;
+  }
+}
+
+.cta-about {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: #fff;
+}

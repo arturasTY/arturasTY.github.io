@@ -1,0 +1,98 @@
+.home-sections {
+	section.about {
+		background: linear-gradient(to right, rgba(38, 42, 64, 0.85) 0%, rgba(255, 46, 99, 0.85) 100%), url(../images/home-background.jpg) no-repeat;
+    	background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	h3.home-intro {
+		color: $darkgrey;
+	    background: white;
+	    font-size: 72px;
+	    font-family: 'Oswald', sans-serif;
+	    text-transform: uppercase;
+	    font-weight: 700;
+		letter-spacing: 1px;
+		z-index: 3;
+    span {
+        display: inline-block;
+        padding: 18px 26px;
+        &:last-child {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            padding: 16px 22px;
+            font-weight: 400;
+            float: left;
+            background: white;
+            margin-top: 5px;
+            letter-spacing: normal;
+        }
+    }
+	}
+  i.ion-ios-arrow-down {
+      position: absolute;
+      bottom: 25px;
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+          opacity: .8;
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.home-sections {
+		h3.home-intro {
+			font-size: 60px;
+		}
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.home-sections {
+		h3.home-intro {
+			font-size: 48px;
+			span {
+				&:last-child {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.home-sections {
+		h3.home-intro {
+			font-size: 36px;
+			// span {
+			// 	&:last-child {
+			// 		font-size: 14px;
+			// 	}
+			// }
+		}
+		i.ion-ios-arrow-down {
+			bottom: 15px;
+		}
+		section.about {
+			background: linear-gradient(to right, rgba(38, 42, 64, 0.85) 0%, rgba(255, 46, 99, 0.85) 115%), url(../images/home-background.jpg) no-repeat;
+			background-position: center right;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+	}
+}
+
+@media only screen and (max-width : 320px) {
+	.home-sections {
+		h3.home-intro {
+			font-size: 30px;
+			span {
+				&:last-child {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

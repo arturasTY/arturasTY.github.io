@@ -1,0 +1,50 @@
+section.cv {
+	background: $green;
+	padding: 30px 0;
+
+	.sub-line {
+		font-size: 38px;
+	}
+
+	a.cta {
+		background: $main;
+		padding: 1em 2.5em;
+		color: white;
+		&:hover {
+			background: transparent;
+			color: $main;
+			border-color: $main;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section.cv {
+		.tag-line {
+			font-size: 28px;
+		}
+		.sub-line {
+			font-size: 34px;
+		}
+		.col-1 {
+			text-align: center;
+		}
+		a.cta {
+			margin: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	section.cv {
+		.tag-line {
+			font-size: 20px;
+		}
+		.sub-line {
+			font-size: 24px;
+		}
+		a.cta {
+			padding: 1em;
+		}
+	}
+}

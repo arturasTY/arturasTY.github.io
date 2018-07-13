@@ -1,0 +1,187 @@
+section.portfolio {
+    padding: 10px 10px 40px;
+    overflow-x: hidden;
+    position: relative;
+    .intro-text {
+        margin: 30px 0;
+    }
+    .examples-belt {
+        width: 200%;
+        position: relative;
+        left: 0%;
+        -webkit-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        @include clearfix;
+    }
+    .examples-wrap, .more-info-wrap {
+        width: 50%;
+        float: left;
+    }
+
+    .more-info {
+        width: 100%;
+        margin-left: 20px;
+        position: relative;
+        display: none;
+        img {
+            max-width: 100%;
+        }
+        i.back {
+            font-size: 60px;
+            cursor: pointer;
+            color: $green;
+            position: absolute;
+            right: 0;
+            top: -100px;
+            opacity: .7;
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .tag-line, .sub-line {
+        color: $darkgrey;
+    }
+    .cta-more-block {
+        position: absolute;
+        right: 10px;
+        top: 55px;
+        color: #fff;
+        a {
+            padding: .75em 2em;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+    .port-examples {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        div[class^='port-example-'] {
+            background-size: cover;
+            background-position: center;
+            min-height: 32vh;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            //box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+            &:nth-child(1) {
+                grid-column: 1 / 3;
+            }
+            &:nth-child(5) {
+                grid-column: 2 / 4;
+            }
+            &:nth-child(6) {
+                grid-column: 4;
+                grid-row: 2 / 4;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: $main;
+                opacity: .6;
+                transition: all .3s ease-in-out;
+            }
+            img {
+                max-width: 100%;
+            }
+            .hover-overlay {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                top: 100%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: fade-out($green, 0.2);
+                height: 100%;
+                -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                strong {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    color: white;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+                div.icon {
+                    font-size: 55px;
+                    color: white;
+                }
+            }
+            &:hover .hover-overlay {
+                top: 0%;
+            }
+        }
+    }
+}
+
+//@for $i from 1 through 8 {
+//    @if $i < 9 {
+//        .port-example-#{$i} {
+//            background-image: url(../images/example-#{$i}.jpg);
+//            background-position: center center;
+//            background-repeat: no-repeat;
+//            background-size: cover;
+//       }
+//    }
+//}
+
+@media only screen and (max-width: 480px) {
+  section.portfolio {
+    padding: 50px 0;
+
+    .intro-text {
+      margin-left: 10px;
+      margin-bottom: 30px;
+      .tag-line {
+        font-size: 22px;
+      }
+      .sub-line {
+        font-size: 32px
+      }
+    }
+
+    .port-examples {
+
+      div[class^='port-example-'] {
+        margin: 10px;
+        width: calc(100% - 20px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  section.portfolio {
+
+    .port-examples {
+
+      div[class^='port-example-'] {
+        width: calc(50% - 20px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.portfolio {
+
+    .port-examples {
+
+      div[class^='port-example-'] {
+        width: calc(33% - 20px);
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+
+//// Flex
+.home-sections {
+  .flex-alt {           // Title to stay flex in mobile
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;      // Add height to center vertically
+    align-items: center;
+  }
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @include tablet {
+      display: block;
+    }
+  }
+  .flex-center {       // Centering Classes
+    justify-content: center;
+  }
+  .flex-around {      // Centering Classes
+    justify-content: space-around;
+  }
+  .flex-start {
+    justify-content: flex-start;
+  }
+
+  .flex-align {
+    align-items: center;
+  }
+}
+
+//// Columns
+
+.col-1-alt {
+    max-width: 100%;
+    text-align: center;
+}
+
+.col-1-skill {
+    width: 80%;
+    margin: 0 10px;
+}
+
+.col-1 {
+  max-width: 480px;
+  margin: 0 10px;
+  padding: 10px;
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.col-2 {
+  max-width: 960px;
+  margin: 0 10px;
+}
+
+.col-50 {
+	width: 50%;
+	//margin: 0 10px;
+}
+
+.pad-10 {
+  padding-top: 10px;
+}

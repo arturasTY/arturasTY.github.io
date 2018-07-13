@@ -1,0 +1,38 @@
+/*Variables*/
+
+  $darkgrey: #1d2025;
+  $main: #262a40;
+  $whitesmoke: #F6F7F8;
+  $green: #00d0bc;
+
+/*Variables*/
+
+@import "compass";
+
+@import "base/base";
+
+@import "mixins/mixins";
+
+@import "layout/home-sections";
+
+@import "layout/home";
+
+@import "layout/about";
+
+@import "layout/services";
+
+@import "modules/header";
+
+@import "modules/portfolio";
+
+@import "modules/skills";
+
+@import "modules/cv";
+
+@import "modules/contact";
+
+@import "modules/footer";
+
+@import "partials/buttons";
+
+@import "media/media";

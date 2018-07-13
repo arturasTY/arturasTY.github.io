@@ -1,0 +1,172 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 72px;
+  background-color: rgba(0,0,0,0.19);
+
+  .logo {
+    background: url(../images/logo-1.svg) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 25px;
+    top: 15px;
+  }
+
+  .site-nav {
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    right: 100px;
+    top: 18px;
+    -webkit-transform:translate(800px,0);
+    -ms-transform: translate(800px,0);
+	  -o-transform:translate(800px,0);
+	  transform:translate(800px,0);
+	  -o-transition: -o-transform 0.3s;
+	  transition: transform 0.3s;
+    &.is-open {
+      -o-transform:translate(0,0);
+	    transform:translate(0,0);
+    }
+  }
+    ul {
+      @include clearfix;
+      li {
+        float: left;
+        a {
+          color: white;
+          padding: 9px 16px;
+          display: block;
+          -o-transition: color 0.3s;
+      	  transition: color 0.3s;
+          &:hover {
+            color: #00d0bc;
+          }
+        }
+      }
+    }
+    .btn-social {
+      font-size: 22px;
+    }
+
+  .nav-toggle {
+    width: 84px;
+    height: 72px;
+    background: rgba(0,0,0,0.19);
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.3s;
+	  -moz-transition: background-color 0.3s;
+	  -ms-transition: background-color 0.3s;
+	  -o-transition: background-color 0.3s;
+	  transition: background-color 0.3s;
+    &:hover {
+      background-color:rgba(0,0,0,0.57);
+    }
+    &.is-open {
+      background-color: #00d0bc;
+      &:hover {
+        background-color: #00d0bc;
+      }
+    }
+
+    .ion-navicon {
+      font-size: 42px;
+      color: white;
+      position: absolute;
+      left: 29px;
+      top: 15px;
+      -webkit-transform:rotate(0deg);
+      -moz-transform:rotate(0deg);
+      -ms-transform:rotate(0deg);
+      -o-transform:rotate(0deg);
+      transform:rotate(0deg);
+      -o-transition: -o-transform 0.3s;
+  	  transition: transform 0.3s;
+      &.is-open {
+        -webkit-transform:rotate(450deg);
+	      -moz-transform:rotate(450deg);
+	      -ms-transform:rotate(450deg);
+	      -o-transform:rotate(450deg);
+	      transform:rotate(450deg);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 46px;
+    .logo {
+      width: 35px;
+      height: 35px;
+      top: 7px;
+      left: 15px;
+    }
+
+    .site-nav {
+      position: fixed;
+      background-color: $main;
+      width: 100%;
+      right: -190px;
+      top: 0;
+      bottom: 0;
+      padding: 50px 0px 0 20px;
+      z-index: -1;
+      -o-transition: all 0.5s;
+		  transition: all 0.5s;
+      &.is-open {
+        right: 0;
+      }
+      ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li {
+          float: none;
+          display: block;
+          line-height: 40px;
+          padding: 0;
+        }
+      }
+    }
+
+    .nav-toggle {
+      display: block;
+      z-index: 2;
+      height: 46px;
+      width: 46px;
+      .ion-navicon {
+        top: 2px;
+        left: 10px;
+      }
+    }
+    .btn-social {
+      font-size: 32px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    .site-nav {
+      ul {
+        li {
+          line-height: 30px;
+          &:nth-child(5) {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
